@@ -1,0 +1,40 @@
+<!--This page shows the registrated user information--> 
+
+
+{% extends "base.html"%}
+{% block content %}
+<table style="margin-left: 10%; margin-top:0%">
+	<h2> Club Current Members: </h2>
+	 
+
+	<tr>
+		<td>
+			<img style="max-width:150px" src="https://pbs.twimg.com/profile_images/494831134929203202/VAaw3mjd_400x400.jpeg" alt="aa"/>
+	    </td>
+	    <td>
+	    	<p style="padding-left: 30px"><b>Name</b>: Amanda Townley &nbsp&nbsp <b>Age</b>: 46 &nbsp&nbsp <b>Occupation</b>: House wife
+	    	<br><br>
+	    	<b>Self Introduction</b>: "We're not perfect, Michael. But at least we're both trying. It'll take some time, but we'll be okay."
+	        </p>
+	    </td>
+	</tr>
+
+	{%if user_list:%}
+	{% for user in user_list: %}
+	<tr>
+		<td>
+			<img style="max-width:150px" src="{{ user.image }}" alt="aa"/>
+	    </td>
+	    <td>
+	    	<p style="padding-left: 30px"><b>Name</b>: {{user.name}} &nbsp&nbsp <b>Age</b>: {{user.age}} &nbsp&nbsp <b>Occupation</b>: {{user.occupation}} 
+	    	<br><br>
+	    	<b>Self Introduction</b>: {{user.self_intro}}
+	        </p>
+	    </td>
+	</tr>
+	{% endfor %} 
+	{% endif %}  
+
+</table>
+
+{% endblock %}

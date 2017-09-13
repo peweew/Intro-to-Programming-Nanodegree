@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+	<table style="margin-left: 20%; margin-top:10%">
+		<tr>
+			<th class="registration_table">Name:</th>
+			<td class="registration_table"><input type="text" name="name"></td>
+		</tr>
+	    <tr>
+			<th class="registration_table">Age:</th>
+			<td class="registration_table"><input type="text" name="age"></td>
+		</tr>
+	    <tr>
+	    	<th class="registration_table">Occupation:</th>
+			<td class="registration_table"><input type="text" name="occupation"></td>
+		</tr>
+		<tr>
+			<th class="registration_table">Image:</th>
+			<td class="registration_table"><input type="text" name="image"></td>
+		</tr>
+		<tr>
+			<th class="registration_table">Self Introduction:</th>
+			<td class="registration_table"><textarea name="self_intro" row="5" col="100"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding-left: 200px"><input type="submit" value="Submit"/></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding:40px"><span style="color:red">{{error}}</span></td>
+		</tr>
+	</table>
+
+</form>
+
+{% endblock %}

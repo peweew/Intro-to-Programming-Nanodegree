@@ -1,0 +1,137 @@
+/* This is a CSS comment.*/
+
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
+
+
+* {
+   /*outline: 1px solid red !important;*/
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+ 
+body{              /*body style*/
+	margin: 0;
+}
+
+
+
+header.header{      /*header style;*/
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-top: 0%;
+	margin-bottom: 3%;   
+	background-color: #33BEBE;
+	height: 150px;
+}
+
+header div.header_font{     /* header font style*/
+	padding-top: 20px;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	font-size: 400%;
+	font-weight: lighter;
+	color: rgb(255, 251, 254);
+}
+
+
+nav ul{                    /*navigation style*/
+    list-style-type: none;
+    padding-left: 5%;
+}
+
+li.nav_li{                 /*navigation item style*/
+	float: left; 
+	margin-right: 50px;
+	width: 250px;
+}
+
+a.nav_a{                         /*navigation item link style*/
+	display: block;
+	padding: 7.5px;
+	color: white;
+	font-style: "Open Sans", sans-serif;
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+}
+
+a.nav_sub_a{ 
+	display: block;
+	padding: 7.5px; 
+	color: white;
+	font-style: "Open Sans", sans-serif;
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+}
+ 
+
+.nav_li ul{ 
+	position:relative; 
+	left:0px;
+    list-style-type: none;
+    background-color:#33BEBE;
+    display: none
+}
+
+ 
+
+a:link{                   /*navigation item link normal style*/
+	text-decoration: none;
+}
+
+
+nav ul li:hover{                  /*navigation item link hover style*/
+	background-color:#33BEBE;
+} 
+.nav_li:hover > ul{
+	display: block;
+
+}
+
+
+section.sec_container{    /*section style*/
+	min-height: 630px;
+	margin-left: 250px;
+	margin-right:250px;
+	margin-top: 100px;
+	font-family: Palatino Linotype;
+	font-size: 110%;
+	color:#404040;
+}
+
+img.club_photo{           /*photo.html photo style*/
+	max-width:400px;
+}
+
+.registration_table{       /*registration.html table style*/
+	text-align: left;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 120%;
+	width: 60%;
+	max-width: 60%;
+}
+
+footer.footer{            /*footer style*/
+	background-color: #33BEBE;
+    color: white;
+    text-align: center;
+    margin-top:5%;
+    margin-left: 0%;
+	margin-right: 0%;
+    padding: 1%;
+}
+
+

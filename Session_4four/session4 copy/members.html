@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{% block content %}
+<table style="margin-left: 10%; margin-top:0%">
+	<h2> Club Current Members: </h2>
+	{%if user_list:%}
+	{% for user in user_list: %}
+	<tr>
+		<td>
+			 
+			{% if user.name=="ab" %}
+			<img src="{{ user.image }}" alt="aa"/>
+			{{user.image}}
+			{% endif %}
+	    </td>
+	    <td>
+	    	Name: {{user.name}}, Age: {{user.age}}, Occupation: {{user.occupation}}
+	    	
+	    	<!--
+	    	<br>
+	    	Self Introduction: {{user.self_intro}}-->
+	    </td>
+	</tr>
+	{% endfor %} 
+	{% endif %}  
+
+</table>
+
+{% endblock %}

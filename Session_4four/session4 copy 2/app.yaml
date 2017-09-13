@@ -1,0 +1,26 @@
+application: sess4-1135
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /img
+  static_dir: img
+
+- url: /script
+  static_dir: script
+
+- url: /.*
+  script: session4.app
+
+
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

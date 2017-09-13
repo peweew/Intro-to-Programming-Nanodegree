@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+
+<!-- This is the template for all the websites. There are totally five pages in this project: index.html, members.html, registration.html, photo.html, about.html-->
+
+
+
+<html>
+<head>
+	<title> Los Santos Golf Club </title>
+     
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/script/script.js"></script>
+
+</head>
+
+<body> 
+
+<header class="header">  <!--header block-->
+    <div class="header_font">          <!--font of header-->                
+        Los Santos Golf Club
+    </div>
+    <nav>         <!-- navigation -->      
+            <ul > 
+                <li class="nav_li" id="nav_home"> 
+                    <a class="nav_a" href="index.html">Home</a> 
+                    <ul id="nav_home_sub">
+                        <li>
+                            <a class="nav_sub_a" href="#">Club Map</a>
+                        </li>
+                    </ul> 
+                </li>
+                <li class="nav_li" id="nav_member">
+                    <a class="nav_a" href="#">Member</a>
+                    <ul id="nav_member_sub">
+                        <li>
+                            <a class="nav_sub_a" href="members.html">Club Members</a>
+                        </li>
+                        <li>
+                            <a class="nav_sub_a" href="registration.html">Registration</a>
+                        </li>
+                    </ul> 
+                </li> 
+                <li class="nav_li" id="nav_photo"> 
+                    <a class="nav_a" href="#">Photo</a> 
+                    <ul id="nav_photo_sub">
+                        <li>
+                            <a class="nav_sub_a" href="photo.html">Club Photo</a>
+                        </li>
+                        <li>
+                            <a class="nav_sub_a" href="photosubmit.html">Submit Photo</a>
+                        </li>
+                    </ul> 
+                </li>
+
+                <li class="nav_li"> <a class="nav_a" href="about.html">About</a> </li>
+            </ul>
+        
+    </nav>
+</header> 
+
+
+<section class="sec_container">  <!--other pages in here-->
+
+    {% block content %}
+    {% endblock %}
+  
+</section>
+
+
+<footer class="footer">          <!--footer-->
+    Copyright @ PeweeDesign
+</footer>
+</body>
+</html>

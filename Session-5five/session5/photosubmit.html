@@ -1,0 +1,39 @@
+<!--This is the photo page. It shows the member's uploading photo--> 
+
+
+{% extends "base.html"%}
+{% block content %}
+ 
+<br>
+<br>
+<h3 style="margin-left: 20%">Upload new photo:</h3>
+<form method="post">
+	<table style="margin-left: 30%; margin-top:0%">
+		<tr>
+			<th class="registration_table">User Name:</th>
+			<td class="registration_table"><input type="text" name="user_name"></td>
+		</tr>
+		<tr>
+			<th class="registration_table">Photo Link:</th>
+			<td class="registration_table"><input type="text" name="photo_link"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding-left: 50%"><input type="submit" value="Submit"/></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 250px"><span style="color:red">{{error}}</span></td>
+		</tr>
+	</table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

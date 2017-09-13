@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Los Santos Golf Club </title>
+     
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body> 
+
+<header class="header">  <!--title block-->
+    <div class="header_font">          <!--image of titel-->                
+        Los Santos Golf Club
+    </div>
+    <div class="navigation">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav_li"> <a href="./index.html">Home</a> </li>
+                <li class="nav_li"> <a href="members.html">Members</a> </li>
+                <li class="nav_li"> <a href="registration.html">Registration</a> </li>
+                <li class="nav_li"> <a href="photo.html">Photo</a> </li>
+                <li class="nav_li"> <a href="about.html">About</a> </li>
+            </ul>
+        </div>
+    </div>
+</header> 
+
+
+<section class="sec_container">
+
+    {% block content %}
+    {% endblock %}
+  
+</section>
+
+
+<footer class="footer">
+    Copyright @ PDesign.com
+</footer>
+</body>
+</html>

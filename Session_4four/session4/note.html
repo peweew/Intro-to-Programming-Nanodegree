@@ -1,0 +1,43 @@
+<!--note--> 
+
+
+{% extends "base.html" %}
+{% block content%}
+
+<h2>Note</h2>
+
+<h3>Request and Respondes</h3>
+<p> 
+The html transmission between client and server uses two protocol: request and respondes. 
+Request is invoked by user/client. User send the requeset and ask the service from services.
+Request has a few functions such as GET, POST, DELETE, PUT and so no. GET and POST are two most popular funcitons.
+<br>
+Get sends request to server for information. Get usually involves in requesting data from a specified resource. But POST can send data to server to processe a specified resource.
+Get seems passive and POST is a little active.
+Server use respond to reply user's request and provide the corresponding service. 
+</p>
+
+<h3>Validate user's input</h3>
+<p>Validate user's input is very important. User can input strings which may tampering the website, change the states of website, or get sensitive information. 
+<br>
+One example is HTML tamper attack. I use "autoescape=True" to change user's html tag into the plaintext form such that the symbol "<" will be convert into  &amp;lt;. 
+<br>
+Another example is SQL Injection attack. User can add special string to exeute SQL query if I do not check the input string and filter out special symbols.
+</p>
+ 
+<p>
+Validiation is also very important for uses' experience. User may input the wrong data, or any form of data but not the one that we expected. For instance, my website require user to input their birthday. User may input birthday in the form of 1990/09/30, or 09/30/1990, or September,thirty,1990. If I do not add validition for user's birthday data, all the form of birthday will pass and stored on my website. So for each user, my website will have their own birthday form, instead of a unique form for everyone. This makes my website very messy. It is alos hard for me to deal with the different form of data, such as getting user's year of birthday. The validiation of user's input will allow all user to input the correct data format, and show a format ouput, and also make me to deal the data conveniently. 
+</p>
+
+
+<h3>Website Template</h3>
+<p>A website may have a lot of pages. Each page may share the same header, nagivation bar, font, and footer.
+If we write HTML and CSS for each page, it will take plenty of time. 
+HTML template provide a template for couple of pages. For example, I use python to generate HTML template.
+I use the base.html as template, and provide service for 6 other pages: index.html,photo.html,registration.html,about.html,members.html.
+HTML template save me a lot of time not only geneate HTML page, but also modify HTML pages
+</p>
+
+
+
+{% endblock %}

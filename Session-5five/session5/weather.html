@@ -1,0 +1,49 @@
+<!--This page shows the LA weather information--> 
+
+
+{% extends "base.html"%}
+{% block content %}
+ 
+
+<h2 style="margin-left:200px"> Los Angeles, CA, USA</h2>
+
+<div style="margin-left:200px">
+	<table style="margin-top:100px;">
+		<tr>
+			<td> 
+				{%if weather_name=="Clear":%}
+					<img width="200px" src="/img/weather/sun.png" alt="ah">
+				{%elif weather_name=="Clouds":%}
+					<img width="200px" src="/img/weather/cloud.png" alt="ah">
+				{%elif weather_name=="Rain":%}
+					<img width="200px" src="/img/weather/rain.png" alt="ah">
+				{%elif weather_name=="Thunderstorm":%}
+					<img width="200px" src="/img/weather/thunderstorm.png" alt="ah">
+				{%elif weather_name=="Snow":%}
+					<img width="200px" src="/img/weather/snow.png" alt="ah">
+				{%elif weather_name=="Mist":%}
+					<img width="200px" src="/img/weather/mist.png" alt="ah">
+				{%endif%}
+			</td>
+			<td style="padding-left:50px;">
+				<p style="font-size: 25px;">Degree: {{temperature}}°C</p>
+			</td>
+		</tr>
+		<tr style="text-align:center;padding-top:20px">
+			<td> 
+				<p style="font-size: 20px;">{{weather_name}}</p>
+			</td>
+			<td style="padding-left:30px;">
+			</td>
+        </tr> 
+	</table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+
+{% endblock %}

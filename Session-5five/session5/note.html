@@ -1,0 +1,73 @@
+<!--This page shows the club information: location, history, and hours--> 
+
+
+{% extends "base.html" %}
+{% block content%}
+
+<div style="padding:20px;background-color: #E6E9F7;">
+<h3 style="text-align:center">Javascript</h3>
+<p>
+
+<b>The navigation bar uses of javascript to generate slide down menu.</b> For example, I use $(#nav_home) to get the object with id=#nav_home in html that I need to change. Function hover() is the function that traces the user’s mouse hover events. When user hover on the $(#nav_home) object, the function:
+<br>
+<p style="text-align:center;"> function(){$("#nav_home_sub").stop().slideToggle("fast");</p> 
+will be executed. $("#nav_home_sub") is the object with id =  #nav_home_sub. It will stop the previous execute using function stop() and execute the function slideToggle("fast");
+<br>
+Link: <a href="http://www.w3schools.com/js/default.asp">http://www.w3schools.com/js/default.asp</a>
+<br>
+Link: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a> 
+
+
+</p>
+
+</div>
+
+<br>
+<br>
+
+
+<div style="padding:20px;background-color: #EAF7EF;">
+ 
+<h3 style="text-align:center">API</h3>
+<p>
+<b>Home has two sub-menu: club map and weather.
+Club map uses google staic map API</b>.  I use the google map API in MapHandler() in session5.py. The MapHandler record the data of latitude and longitude of golf club in LA, and append to google API url to generate the map image url. The image url contains the location of golf club address. The image url is transmitted to map.html and render to the website.
+<br>
+Link: <a href="https://developers.google.com/maps/documentation/static-maps/intro"> https://developers.google.com/maps/documentation/static-maps/intro </a>
+</p>
+
+<p>
+<b>Weather use open weather API</b>. I use the open weather API in WeatherHandle() in session5.py. I use open weather API to get the weather information about LA, CA, USA. I record the city ID of LA, and append the city ID to the API’s url. The API will return json object. So I use the json.load(content_str) to return json object. Since I am interested in weather and temperature information, I use:
+weather_name = content_json["weather"][0]["main"] 
+
+<p style="text-align:center;">temperature = int(content_json["main"]["temp"])</p>
+
+to get the weather condition and temperature.  The weather condition and temperature information are rendered in weather.html. I use if sentence to load the weather icon depending on weather condition.  
+<br>
+Link: <a href="http://openweathermap.org/current#cityid"> http://openweathermap.org/current#cityid </a>
+</p>
+</div>
+
+<br>
+<br>
+
+<div style="padding:20px;background-color: #F7F4EE;">
+<h3 style="text-align:center">Relational Database </h3>
+<p>
+<b>Club Members and Registration use relational database</b>. The registration page submit the user’s information to database. It is implemented by RegistrationHandler in session5.py. If the user’s input is not invalid, the information such like name, age, occupation and so on will be stored in User database. All the user in database will be shown in member.html. The member.html will MemberHandler in session5.py to query all the user in User database. Then for each user in User, I use "for user in users" in member.html to list all the user that has been registered and saved in database.
+
+</p>
+
+<p>
+	Club photos and photo submission use relational database as well. They are implemented similar to Club photos and photo submission.
+</p>
+
+Link: <a href="http://www.w3schools.com/sql/">http://www.w3schools.com/sql/</a>
+<br>
+Link: <a href="https://cloud.google.com/appengine/docs/python/ndb/">https://cloud.google.com/appengine/docs/python/ndb/</a>
+
+</div>
+
+
+
+{% endblock %}

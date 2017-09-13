@@ -1,0 +1,18 @@
+<!--This is the photo page. It shows the member's uploading photo--> 
+
+
+{% extends "base.html"%}
+{% block content %}
+<div>
+	<img class="club_photo" src="/img/golf1.png" alt="ad"/>
+	<img class="club_photo" src="/img/golf2.jpg" alt="ad"/>
+	<img class="club_photo" src="/img/golf3.jpg" alt="ad"/>
+	<img class="club_photo" src="/img/golf4.jpg" alt="ad"/>
+	<img class="club_photo" src="/img/golf5.jpg" alt="ad"/>
+	{% for image in images %}
+	<img class="club_photo" src="{{image.link}}" alt="ad"/>
+	{% endfor %}
+</div>
+<br>
+<br> 
+{% endblock %}
